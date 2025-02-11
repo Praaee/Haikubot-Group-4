@@ -3,15 +3,11 @@ import re
 import syllables
 
 def count_syllables(text):
-    """
-    Count syllables using the 'syllables' package.
-    """
+    
     return syllables.estimate(text)
 
 def get_headlines(api_key):
-    """
-    Fetches headlines from NewsAPI and cleans them by removing trailing source info.
-    """
+    
     url = "https://newsapi.org/v2/top-headlines"
     params = {
         "country": "us",
@@ -33,11 +29,7 @@ def get_headlines(api_key):
     return headlines
 
 def best_split(headline):
-    """
-    Attempts to split a headline into three parts (lines) to match a 5-7-5 haiku.
-    Tries every possible split and calculates the total error relative to (5, 7, 5).
-    Returns a tuple (best_split, best_error) where best_split is a tuple of three strings.
-    """
+    
     words = headline.split()
     n = len(words)
     if n < 3:
@@ -63,10 +55,9 @@ def best_split(headline):
     return best, best_err
 
 def generate_haiku(api_key):
-    """
-    Iterates over the fetched headlines and uses best_split() on each.
-    Returns the haiku split with the smallest error.
-    """
+    
+    
+    
     headlines = get_headlines(api_key)
     best_overall, best_headline, best_err = None, None, float('inf')
     for h in headlines:
