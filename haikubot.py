@@ -1,5 +1,4 @@
 import requests
-import re
 import syllables
 
 def count_syllables(text):
