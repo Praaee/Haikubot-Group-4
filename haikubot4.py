@@ -59,7 +59,7 @@ def generate_haiku(api_key):
 
 
 def post_to_discord(webhook_url, message):
-   
+    
     data = {"content": message}
     requests.post(webhook_url, json=data)
 
@@ -74,7 +74,7 @@ def main():
         
         message = (f"Best headline: '{headline}' (error: {error})\n\n" +
                    "\n".join(haiku) +
-                   "\n\n~Group-14")
+                   "\n\n~Group-4")
         print("Generated Haiku:\n")
         print(message)
         
