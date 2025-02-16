@@ -65,7 +65,7 @@ def main():
     if haiku:
         message = (f"Best headline: '{headline}' (error: {error})\n\n" +
                    "\n".join(haiku) +
-                   "\n\n~Group-14")
+                   "\n\n~Group-4")
         print("Generated Haiku:\n")
         print(message)
         if DISCORD_WEBHOOK_URL and DISCORD_WEBHOOK_URL != "https://discord.com/api/webhooks/1339685758273061016/COYZDNyTFckb1PX2PDalu-LUnaea-BEIeQsG9c4ca1my9x2dZTmITiFinjRkjN0Dhini":
