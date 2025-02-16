@@ -65,9 +65,9 @@ def post_to_discord(webhook_url, message):
 
 
 def main():
-    
+    #Webhook gets placed in "DISCORD_WEBHOOK_URL" whenever it is needed
     API_KEY = "079b795fbf844ab3876b199b0b236b37"
-    DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1339685758273061016/COYZDNyTFckb1PX2PDalu-LUnaea-BEIeQsG9c4ca1my9x2dZTmITiFinjRkjN0Dhini"
+    DISCORD_WEBHOOK_URL = ""
     
     haiku, headline, error = generate_haiku(API_KEY)
     if haiku:
@@ -78,7 +78,7 @@ def main():
         print("Generated Haiku:\n")
         print(message)
         
-        if DISCORD_WEBHOOK_URL and DISCORD_WEBHOOK_URL != "https://discord.com/api/webhooks/1339685758273061016/COYZDNyTFckb1PX2PDalu-LUnaea-BEIeQsG9c4ca1my9x2dZTmITiFinjRkjN0Dhini":
+        if DISCORD_WEBHOOK_URL and DISCORD_WEBHOOK_URL != "":
             post_to_discord(DISCORD_WEBHOOK_URL, message)
     else:
         print("Could not generate a haiku.")
